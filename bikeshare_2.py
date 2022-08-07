@@ -340,16 +340,17 @@ def main():
             # inform the user that the data for the chosen city is not found
             print(f"\nI am sorry. We are unable to reach the data for {city}.")
 
-        # call function to view raw data of chosen dataset
-        view_data(df)
+        finally:
+            # call function to view raw data of chosen dataset
+            view_data(df)
 
-        # ask if user want to restart the program
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+            # ask if user want to restart the program
+            restart = input('\nWould you like to restart? Enter yes or no.\n')
 
-        # check if user answered yes to restart
-        if restart.lower() != 'yes':
-            # exit the loop
-            break
+            # check if user answered yes to restart
+            if restart.lower() != 'yes':
+                # exit the loop
+                break
 
 if __name__ == "__main__":
     main()
