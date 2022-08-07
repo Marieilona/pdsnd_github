@@ -3,18 +3,18 @@ import time
 import pandas as pd
 
 # create dictionary with the name of relevant csv files.
-city_data = { 'chicago': 'chicago.csv',
+CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-# create a list with city names found in the city_data dicitonary keys
-cities = ', '.join(list(city_data.keys())).title()
+# create a list with city names found in the CITY_DATA dicitonary keys
+CITIES = ', '.join(list(CITY_DATA.keys())).title()
 
-# create a list with the optional months
-months = ["All", "January", "February", "March", "April", "May", "June"]
+# create a list with the optional MONTHS
+MONTHS = ["All", "January", "February", "March", "April", "May", "June"]
 
-# create a list with the optional days
-days = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+# create a list with the optional DAYS
+DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 def get_filters():
     """
@@ -31,15 +31,15 @@ def get_filters():
     city = ''
 
     # loop until the variable city contains a valid city
-    while city not in city_data.keys():
+    while city not in CITY_DATA.keys():
         # get user input for city (chicago, new york city, washington)
-        city = input(f"\nWhich city do you want to explore ({cities}): ").lower()
+        city = input(f"\nWhich city do you want to explore ({CITIES}): ").lower()
 
         # display the chosen city
         print(f"You chose {city.title()}")
 
         # check if the inserted city is valid
-        if city not in city_data.keys():
+        if city not in CITY_DATA.keys():
             # ask user to try again
             print(f"Ooops you can't choose {city}. Try again")
 
@@ -47,15 +47,15 @@ def get_filters():
     month = ''
 
     # loop until the variable month contains a valid month
-    while month not in months:
+    while month not in MONTHS:
         # get user input for month (all, january, february, ... , june)
-        month = input(f"\nWhich month do you want to analyze? ({', '.join(months)}): ").title()
+        month = input(f"\nWhich month do you want to analyze? ({', '.join(MONTHS)}): ").title()
 
         # display the chosen month
         print(f"You chose {month}")
 
         # check if the inserted month is valid
-        if month not in months:
+        if month not in MONTHS:
             # ask user to try again
             print(f"Ooops you can't choose {month}. Try again")
 
@@ -63,15 +63,15 @@ def get_filters():
     day = ''
 
     # loop until the variable day contains a valid day
-    while day not in days:
+    while day not in DAYS:
         # get user input for day of week (all, monday, tuesday, ... sunday)
-        day = input(f"\nWhich day do you want to analyze? ({', '.join(days)}): ").title()
+        day = input(f"\nWhich day do you want to analyze? ({', '.join(DAYS)}): ").title()
 
         # display the chosen day
         print(f"You chose {day}")
 
         # check if the inserted day is valid
-        if day not in days:
+        if day not in DAYS:
             # ask user to try again
             print(f"Ooops you can't choose {day}. Try again")
 
@@ -92,7 +92,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     # load date for the chosen city
-    df = pd.read_csv(city_data[city])
+    df = pd.read_csv(CITY_DATA[city])
 
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -103,8 +103,8 @@ def load_data(city, month, day):
 
     # filter by month if applicable
     if month != 'All':
-        # use the index of the months list to get the corresponding int
-        month = months.index(month)
+        # use the index of the MONTHS list to get the corresponding int
+        month = MONTHS.index(month)
 
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
