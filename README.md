@@ -1,35 +1,30 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
-## Bikeshare data
 Created 07.08.2022
 
+## Bikeshare data
+This project is a part of the Udacity Nanodegree [Programming For Data Science](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104)
+
 ### Description
-This project let users analyze data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
+This project let users analyze data related to bike share systems for Chicago, New York City, and Washington in the US. The user can choose what city they want to analyze and decide what month and day that should be analyzed. It is possible to chose all months and days. Based on the users input the following data is calculated and displayed:
 
-The user choose what city they want to analyze, decide what month and day that should be analyzed. It is possible to chose all months and days.
-
-Based on the users input the following data is calculated and displayed:
-
-#### Time stats
+**Time stats**
   - Most common month
   - Most common weekday
   - Most common start hour
 
-#### Station stats
+**Station stats**
   - Most common start station
   - Most common end station
   - Most common route
 
-#### Time duration stats
+**Time duration stats**
   - Total travel time
   - Average travel time
 
-#### User stats
+**User stats**
   - Count of user types
   - Count of gender
 
-### Files used
-Bikeshare_2.py
-chicago.csv
-new_york_city.csv
-washington.csv
+### Files in the repository
+*Bikeshare_2.py* is a python script which runs the whole program. 
+
+The bikeshare data have been provided by Udacity in three csv-files for each city named *chicago.csv*, *new_york_city.csv* and *washington.csv*. All the files are attached in the repository.
