@@ -4,7 +4,7 @@ Created 07.08.2022
 This project is a part of the Udacity Nanodegree [Programming For Data Science](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104)
 
 ### Description
-This project let users analyze data related to bike share systems for Chicago, New York City, and Washington in the US. The user can choose what city they want to analyze and decide what month and day that should be analyzed. It is possible to chose all months and days. Based on the users input the following data is calculated and displayed:
+This program let users analyze data related to bike share systems for Chicago, New York City, and Washington in the US. The user can choose what city they want to analyze and decide what month and day that should be analyzed. It is possible to chose all months and days. Based on the users input the following data is calculated and displayed:
 
 **Time stats**
   - Most common month
