@@ -28,3 +28,6 @@ This program let users analyze data related to bike share systems for Chicago, N
 *Bikeshare_2.py* is a python script which runs the whole program. 
 
 The bikeshare data have been provided by Udacity in three csv-files for each city named *chicago.csv*, *new_york_city.csv* and *washington.csv*. All the files are attached in the repository.
+
+### Limitations and future work
+This code is just the beginning of a small program and should be refactored to improve the quality of the code.
